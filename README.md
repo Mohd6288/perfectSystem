@@ -27,3 +27,4 @@ Exploration:
     Adjust GUI sliders to customize the visual experience.
 
 Note: This is a one-time explanation. Feel free to explore and experiment with the project!
+![2023-12-27 13-53-17](https://github.com/Mohd6288/perfectSystem/assets/79139931/8afb3bed-c0bb-4305-9d72-b424a8e5054a)
