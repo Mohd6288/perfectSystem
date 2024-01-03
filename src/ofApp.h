@@ -13,7 +13,7 @@ public:
 	void draw() override;
 	void mouseDragged(int x, int y, int button) override;
 	void keyPressed(int key) override;
-	ParticleSystem ParticleSys{ 10 };
+	ParticleSystem ParticleSys{ 1000 };
 	char currentKey;
 
 	//color picker
@@ -22,24 +22,16 @@ public:
 	ofxFloatSlider greenCol;
 
 	ofxFloatSlider sizeDot;
-	ofxFloatSlider numPoint;
 	ofxFloatSlider trail;
+	int frameCount = 0;      //This framecount gives the timer for my slide show
+	ofSoundPlayer sound1;    //sound sample
 private:
 
 	ofxPanel gui;
-	ofxFloatSlider overallSpeed;
-	ofxFloatSlider noiseScale;
-	ofxFloatSlider maxLineDistance;
-	ofxFloatSlider lineThickness;
-
-	
-	ofxToggle bLearnBackground;
-	ofVec2f emitterPos;
-	ofVec2f emitterVel;
-	int emitterRate; // Number of particles to emit per frame
-	float emitterLifespan; // How long each particle lives for
-	float emitterMass; // How massive each particle is
-	float emitterAge;
 	bool bDrawLines;
+
+	// Explanatory text
+	ofTrueTypeFont font;
+	string explanationText;
 };
 

@@ -7,8 +7,8 @@ ParticleSystem::ParticleSystem(int _numOfParticles)
     numOfParticles = _numOfParticles;
     
 
-    for (int i = 0; i < numOfParticles / 4; i++) {
-        vec2 loc = vec2(ofRandom(ofGetWidth()), ofRandom(ofGetHeight()));
+    for (int i = 0; i < numOfParticles / 10; i++) {
+        vec2 loc = vec2(ofRandom(ofGetWidth()/4), ofRandom(ofGetHeight())/4);
         vec2 vel = vec2(1 + ofRandom(-3, 3), 1 + ofRandom(-3, 3));
         float rad = ofRandom(2, 10);
         ofColor c = ofColor(ofRandom(255), ofRandom(255), ofRandom(255));
@@ -18,6 +18,19 @@ ParticleSystem::ParticleSystem(int _numOfParticles)
         //Particle a{loc, vel, rad, c, speedLimit, speed};
         Particle* a = new Particle{ loc, vel, rad, c, speedLimit, speed };
         Particles.push_back(a);
+    }
+
+    for (int i = 0; i < numOfParticles / 10; i++) {
+        vec2 loc = vec2(ofRandom(ofGetWidth()/2), ofRandom(ofGetHeight()/2));
+        vec2 vel = vec2(ofRandom(-0.5, 1), ofRandom(0.5, 1));
+        float rad = ofRandom(2, 10);
+        ofColor c = ofColor(ofRandom(255), ofRandom(255), ofRandom(255));
+        float speedLimit = ofRandom(1, rad * 2);
+        float speed = ofRandom(0.5, 1);
+
+        //Particle a{loc, vel, rad, c, speedLimit, speed};
+        Stars* s = new Stars{ loc, vel, rad, c, speedLimit, speed };
+        Particles.push_back(s);
     }
 
 
@@ -62,7 +75,7 @@ void ParticleSystem::addParticle(int x, int y) {
     float rad = ofRandom(2, 10);
     ofColor c = ofColor(ofRandom(255), ofRandom(255), ofRandom(255));
     float speedLimit = ofRandom(1, rad * 2);
-    float speed = ofRandom(0.5, 1);
+    float speed = 0.1;
 
 
     //Particle a{loc, vel, rad, c, speedLimit, speed};

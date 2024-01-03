@@ -1,6 +1,7 @@
 #pragma once
 #include "ofMain.h"
 #include "Particle.h"
+#include "Stars.h"
 
 
 using namespace glm;

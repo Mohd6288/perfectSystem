@@ -39,9 +39,9 @@ void Particle::update(float msX, float msY, char key, float r, float g, float b,
 
     if (msX > 0 && msX < ofGetWidth() && msY > 0 && msY < ofGetHeight()) {
         // Map the x and y coordinates of the particle to the color channels
-        float mappedRed = ofMap(location.x, 0, ofGetWidth(), 0, 255);
-        float mappedGreen = ofMap(location.y, 0, ofGetHeight(), 0, 255);
-        float mappedBlue = ofMap(location.x + location.y, 0, ofGetWidth() + ofGetHeight(), 0, 255);
+        float mappedRed = ofMap(location.x, 0, ofGetWidth(), 0, r);
+        float mappedGreen = ofMap(location.y, 0, ofGetHeight(), 0, g);
+        float mappedBlue = ofMap(location.x + location.y, 0, ofGetWidth() + ofGetHeight(), 0, b);
 
         if (key == '1') {
             // Set color based on the mapped values for an orange-like color
@@ -59,7 +59,7 @@ void Particle::update(float msX, float msY, char key, float r, float g, float b,
         }
     }
 
-    simplePhysics();
+    //simplePhysics();
     move();
     bounce();
 }
