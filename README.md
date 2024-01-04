@@ -36,3 +36,4 @@ To run the code, follow these steps:
 This project is designed for exploration and experimentation. Feel free to interact with the system and observe the various effects your inputs have on the particle dynamics and color interactions!
 
 ![Particle System Screenshot](https://github.com/Mohd6288/perfectSystem/assets/79139931/8afb3bed-c0bb-4305-9d72-b424a8e5054a)
+<a href="https://youtu.be/0ed4BBhEX5k"> Youtube </a>
